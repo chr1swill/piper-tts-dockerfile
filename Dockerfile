@@ -31,4 +31,9 @@ RUN mkdir -p /piper/output
 # Run using this command (assuming the container name is 'piper-env'):
 # echo $(cat /path/to/input.txt) | docker run -i -v /path/to/ouput/dir/:/piper/output piper-env
 ###
-CMD ["/piper/build/piper", "--model", "/piper/model_files/en_US-ryan-high.onnx", "--output_file","/piper/output/piper_output.wav"]
+###
+# Run using this command (assuming the container name is 'piper-env'):
+# Update to allow you to add a plain text file as input, the file will be split on the new lines, each string of text to the new line will be exported as its own file with the name of the text string as its# as the file name 
+###
+###
+CMD ["/piper/build/piper", "--model", "/piper/model_files/en_US-ryan-high.onnx", "--json-input"]

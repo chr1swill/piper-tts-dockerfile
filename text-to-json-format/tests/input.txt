@@ -1,0 +1,5 @@
+this is a file 
+is has many lines
+each line should be tured into a new 
+entry into an array
+there should be five array entryies
